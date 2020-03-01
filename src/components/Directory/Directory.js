@@ -30,15 +30,15 @@ class Directory extends Component {
 					id: 4,
 					title: 'womens',
 					imageUrl: 'https://i.ibb.co/GCCdy8t/womens.png',
-					size: 'large',
-					linkUrl: 'shop/womens'
+					linkUrl: 'shop/womens',
+					size: 'large'
 				},
 				{
 					id: 5,
 					title: 'mens',
 					imageUrl: 'https://i.ibb.co/R70vBrQ/men.png',
-					size: 'large',
-					linkUrl: 'shop/mens'
+					linkUrl: 'shop/mens',
+					size: 'large'
 				}
 			]
 		};
@@ -46,14 +46,12 @@ class Directory extends Component {
 	
 	render() {
 		return (
-			<div className="directory-menu">
-				{
-					this.state.sections.map(({ id, title, imageUrl, size }) => 
-						<MenuItem key={id} title={title} imageUrl={imageUrl} size={size} />
-					)
-				}
-			</div>
-		);
+      <div className='directory-menu'>
+        {this.state.sections.map(({ id, ...restSectionsProps }) => (
+          <MenuItem key={id} {...restSectionsProps} />
+        ))}
+      </div>
+    );
 	}
 }
 
