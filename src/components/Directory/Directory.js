@@ -28,16 +28,16 @@ class Directory extends Component {
 				},
 				{
 					id: 4,
-					title: 'womens',
+					title: 'women',
 					imageUrl: 'https://i.ibb.co/GCCdy8t/womens.png',
-					linkUrl: 'shop/womens',
+					linkUrl: 'shop/women',
 					size: 'large'
 				},
 				{
 					id: 5,
-					title: 'mens',
+					title: 'men',
 					imageUrl: 'https://i.ibb.co/R70vBrQ/men.png',
-					linkUrl: 'shop/mens',
+					linkUrl: 'shop/men',
 					size: 'large'
 				}
 			]
