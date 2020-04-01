@@ -2,8 +2,8 @@ import React from 'react';
 import { Route, Switch } from "react-router-dom";
 
 import './App.css';
-import HomePage from './pages/HomePage/HomePage'
-import ShopPage from './pages/ShopPage/ShopPage'
+import HomePage from './pages/home-page/HomePage'
+import ShopPage from './pages/shop-page/ShopPage'
 
 const App = () => (
   <div>

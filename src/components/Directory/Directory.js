@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
 import './Directory.scss';
-import SECTIONS_DATA from './sections-data'
-import MenuItem from '../MenuItem/MenuItem';
+import SECTIONS_DATA from './sections.data'
+import MenuItem from '../menu-item/MenuItem';
 
 class Directory extends Component {
 	constructor() {
@@ -15,8 +15,8 @@ class Directory extends Component {
 	render() {
 		return (
       <div className='directory-menu'>
-        {this.state.sections.map(({ id, ...restSectionsProps }) => (
-          <MenuItem key={id} {...restSectionsProps} />
+        {this.state.sections.map(({ id, ...restSectionProps }) => (
+          <MenuItem key={id} {...restSectionProps} />
         ))}
       </div>
     );

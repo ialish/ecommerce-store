@@ -1,6 +1,6 @@
 /* Used as starting data for ShopPage */
 
-const COLLECTIONS_DATA = [
+const SHOP_DATA = [
 	{
 		id: 1,
 		title: 'Hats',
@@ -283,4 +283,4 @@ const COLLECTIONS_DATA = [
 	}
 ];
 
-export default COLLECTIONS_DATA;
+export default SHOP_DATA;
