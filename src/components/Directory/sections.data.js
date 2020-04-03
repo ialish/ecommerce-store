@@ -27,9 +27,9 @@ const SECTIONS_DATA = [
 		id: 4,
 		title: 'women\'s',
 		// imageUrl: 'https://i.ibb.co/GCCdy8t/womens.png',
-		imageUrl: 'images/womens.png', // local file in public/images/
+		imageUrl: 'images/women.png', // local file in public/images/
 		size: 'large',
-		linkUrl: 'shop/womens'
+		linkUrl: 'shop/women'
 	},
 	{
 		id: 5,
@@ -37,7 +37,7 @@ const SECTIONS_DATA = [
 		// imageUrl: 'https://i.ibb.co/R70vBrQ/men.png',
 		imageUrl: 'images/men.png', // local file in public/images/
 		size: 'large',
-		linkUrl: 'shop/mens'
+		linkUrl: 'shop/men'
 	}
 ];
 

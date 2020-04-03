@@ -8,8 +8,8 @@ import ShopPage from './pages/shop-page/ShopPage'
 const App = () => (
   <div>
 		<Switch>
-			<Route exact path='/' component={HomePage} />
-			<Route path='/shop' component={ShopPage} />
+			<Route exact path="/" component={HomePage} />
+			<Route path="/shop" component={ShopPage} />
 		</Switch>
 	</div>
 );
