@@ -6,7 +6,7 @@ import Header from './components/header/Header';
 import Homepage from './pages/homepage/Homepage';
 import Shop from './pages/shop/Shop';
 import SignInSignUp from './pages/sign-in-sign-up/SignInSignUp';
-import { auth } from './firebase/firebase.utils';
+import { auth, createUserProfileDocument } from './firebase/firebase.utils';
 
 class App extends Component {
 	constructor() {
@@ -21,8 +21,17 @@ class App extends Component {
 	componentDidMount() {
 		// Set an authentication state observer and get user data
 		// onAuthStateChanged returns firebase.Unsubscribe
-		this.unsubscribeFromAuth = auth.onAuthStateChanged(user => {
-			this.setState({ currentUser: user });
+		this.unsubscribeFromAuth = auth.onAuthStateChanged(async userAuth => {
+			if (userAuth) {
+				const userRef = await createUserProfileDocument(userAuth);
+				userRef.onSnapshot(snapShot => {
+					this.setState({currentUser: {
+						id: snapShot.id, ...snapShot.data()
+					}});
+				})
+			} else { // If the user logs out, we set the currentUser to null that we get back from the auth library
+				this.setState({currentUser: userAuth});
+			}
 		});
 	}
 
