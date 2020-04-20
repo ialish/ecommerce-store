@@ -25,12 +25,12 @@ class App extends Component {
 			if (userAuth) {
 				const userRef = await createUserProfileDocument(userAuth);
 				userRef.onSnapshot(snapShot => {
-					this.setState({currentUser: {
+					this.setState({ currentUser: {
 						id: snapShot.id, ...snapShot.data()
 					}});
 				})
 			} else { // If the user logs out, we set the currentUser to null that we get back from the auth library
-				this.setState({currentUser: userAuth});
+				this.setState({ currentUser: userAuth });
 			}
 		});
 	}
